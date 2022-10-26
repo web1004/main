@@ -1,0 +1,62 @@
+@import url(common.css);
+
+body {
+	background: #979797;
+}
+
+#slideShowp {
+	position: relative;/*부모기준설정*/
+	overflow: hidden; /*넘치는 자식 보이지않게*/
+	width: 940px;
+	height: 430px;
+	margin: 0 auto;
+}
+
+
+#slideShowp .slidep ul {
+	position: absolute;
+	width: 4700px; /*슬라이드가 가로방향일때만->이미지의 총가로길이(940*5)*/
+}
+
+#slideShowp .slidep ul li {
+	float: left;
+}
+
+
+/*좌우버튼*/
+#slideShowp .sidep_btn .prep {
+	position: absolute;
+	top: 180px;
+	left: 30px;
+	width: 65px;
+	height: 65px;
+	background: url(../image/left-off.png) no-repeat;
+}
+#slideShowp .sidep_btn .prep:hover {
+	background: url(../image/left-on.png) no-repeat;
+	cursor: pointer;
+}
+#slideShowp .sidep_btn .nexp {
+	position: absolute;
+	top: 180px;
+	right: 30px;
+	width: 65px;
+	height: 65px;
+	background: url(../image/right-off.png) no-repeat;
+}
+#slideShowp .sidep_btn .nexp:hover {
+	background: url(../image/right-on.png) no-repeat;
+	cursor: pointer;
+}
+#slideShowp .sidep_btn .page {
+	position: absolute;
+	bottom: 10px;
+	left: 450px;
+	font-size: 24px;
+	font-weight: bold;
+	color: #333;
+	width: 80px;
+	padding-top: 10px;
+	height: 50px;
+	text-align: center;
+}

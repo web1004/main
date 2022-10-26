@@ -1,0 +1,62 @@
+@import url(common.css);
+
+body {background: #979797;}
+
+#slideShowUp {
+	position: relative; /*부모기준설정*/
+	overflow: hidden; /*넘치는 자식 보이지않게*/
+	width: 940px;
+	height: 430px;
+	margin: auto;
+}
+
+.slideUp ul {
+	position: absolute;
+}
+
+
+
+/*하단버튼*/
+
+.slideUp_btn {
+	position: absolute;
+	bottom: 40px;
+	right: 20px;
+}
+
+.slideUp_btn ul li {
+	background: #000;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	margin:7px 0;
+	cursor: pointer;
+}
+
+.slideUp_btn ul li.activeup {
+	background: #ff6600;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+}
+
+
+
+/*Play,Stop 버튼*/
+.playstopUp .stopup {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	width: 8px;
+	height: 11px;
+	background: url(../image/btn_pause.png) no-repeat;
+}
+
+.playstopUp .playup {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	width: 8px;
+	height: 11px;
+	background: url(../image/btn_play.png) no-repeat;
+}

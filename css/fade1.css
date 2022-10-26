@@ -1,0 +1,87 @@
+@import url(common.css);
+
+.fadeShow{
+  position:relative;
+  width: 1000px;
+  height: 350px;
+  margin:auto;
+}
+
+
+/* (1)이미지 모두 동일한 위치, 안보이게 함 */
+.changeimg ul li{
+  display: none;
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+
+/* (2)첫번째 이미지만 보임 */
+.changeimg ul li:first-child{
+  display: block;
+}
+
+
+/* 하단버튼 */
+.fadeShow .btn{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.btn ul li{
+  float: left;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #000;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.btn ul li.active{
+  background: #ff6600;
+}
+
+
+
+/* 좌우버튼 */
+.side_btn .lbtn{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  left:30px;
+  width:65px;
+  height: 65px;
+  background: url(../image/left-off.png) no-repeat;
+}
+.side_btn .lbtn:hover{
+ background: url(../image/left-on.png) no-repeat;
+}
+.side_btn .rbtn{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  right:30px;
+  width:65px;
+  height: 65px;
+  background: url(../image/right-off.png) no-repeat;
+}
+
+.side_btn .rbtn:hover{
+  background: url(../image/right-on.png) no-repeat;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
