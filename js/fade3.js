@@ -11,7 +11,6 @@ $(document).ready(function () {
   let imgCount=$img.length;
   let textCount=$img.length;
 
-
   //이미지&텍스트 전환효과 함수
   function changeImg(newImg){ 
 
@@ -21,7 +20,7 @@ $(document).ready(function () {
     }
     oldImg = newImg;
 
-  }
+  };
 
   function changeText(newText){ 
 
@@ -32,7 +31,8 @@ $(document).ready(function () {
     oldText = newText;
 
   }
- 
+
+
   //자동함수 생성
   function autoImg(){
 
@@ -43,7 +43,6 @@ $(document).ready(function () {
 		changeImg(newImg);
 
   }
-
   function autoText(){
 
     newText++;
@@ -85,7 +84,7 @@ $(document).ready(function () {
 
     clearInterval(timer1);
     clearInterval(timer2);
-    
+
     newImg--;
 		if(newImg<0){ 
       newImg=imgCount-1;

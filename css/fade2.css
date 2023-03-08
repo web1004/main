@@ -1,12 +1,11 @@
 @import url(common.css);
 
 .fadeShow{
-  position:fixed;
+  position:relative;
   width: 100%;
   height: 100vh;
   margin:auto;
 }
-
 
 /* (1)이미지 모두 동일한 위치, 안보이게 함 */
 .changeimg ul li{
@@ -20,23 +19,12 @@
   background-size: cover;
 }
 
-
 /* (2)첫번째 이미지만 보임 */
-.changeimg ul li:first-child{
-  display: block;
-}
-.changeimg ul li:nth-child(1){
-  background: url(../image/fade-1.jpg);
-}
-.changeimg ul li:nth-child(2){
-  background: url(../image/fade-2.jpg);
-}
-.changeimg ul li:nth-child(3){
-  background: url(../image/fade-3.jpg);
-}
-.changeimg ul li:nth-child(4){
-  background: url(../image/fade-4.jpg);
-}
+.changeimg ul li:first-child{display: block;}
+.changeimg ul li:nth-child(1){background-image: url(../image/fade-1.jpg);}
+.changeimg ul li:nth-child(2){background-image: url(../image/fade-2.jpg);}
+.changeimg ul li:nth-child(3){background-image: url(../image/fade-3.jpg);}
+.changeimg ul li:nth-child(4){background-image: url(../image/fade-4.jpg);}
 
 /* 하단버튼 */
 .fadeShow .btn{
@@ -44,7 +32,6 @@
   top: 120px;
   left: 100px;
 }
-
 .btn ul li{
   float: left;
   width: 10px;
@@ -53,24 +40,16 @@
   margin: 0 5px;
   cursor: pointer;
 }
-
 .btn ul li.active{
   width: 50px;
   background: #ffff00;
 }
 
-
-
 /* 좌우버튼 */
 .icon{
   font-size: 80px;
-  color:#fff;
+  color: #fff;
 }
-
-/* .icon:hover{
-  opacity: 0.5;
-} */
-
 .side_btn .lbtn{
   position: absolute;
   top:50%;
@@ -78,11 +57,9 @@
   left:30px;
   width:65px;
   height: 65px;
-  /* background: url(../image/left-off.png) no-repeat; */
 }
-.side_btn .lbtn:hover{
- opacity: 0.5;
-}
+.side_btn .lbtn:hover{opacity: 0.5;}
+
 .side_btn .rbtn{
   position: absolute;
   top:50%;
@@ -90,13 +67,8 @@
   right:30px;
   width:65px;
   height: 65px;
-  /* background: url(../image/right-off.png) no-repeat; */
 }
-
-.side_btn .rbtn:hover{
-  opacity: 0.5;
- }
-
+.side_btn .rbtn:hover{opacity: 0.5;}
 
 
 /* 비주얼 텍스트 공통 */
@@ -106,22 +78,15 @@
   left:100px;
   color:#fff;
 }
-
-.changeimg ul li dl dt{
-  font-size: 40px;
-}
-
-
+.changeimg ul li dl dt{font-size: 40px;}
 .changeimg ul li dl dt span{
   font-size: 30px;
   letter-spacing: -1px;
 }
-
 .changeimg ul li dl dd:nth-of-type(1){
- font-size: 14px;
- color:#ddd;
+  font-size: 14px;
+  color:#ddd;
 }
-
 .changeimg ul li dl dd:nth-of-type(2){
   width: 150px;
   height: 42px;
@@ -132,6 +97,3 @@
   font-size: 14px;
   margin-top:20px;
 }
-
-
-

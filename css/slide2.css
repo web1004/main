@@ -1,26 +1,22 @@
 @import url(common.css);
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR|Poppins&display=swap');
-
-body {background: #ffc900;}
 
 #slideShow {
 	position: relative; /*부모기준설정*/
-	overflow: hidden; /*넘치는 자식 보이지않게*/
-	width: 100%;
+	overflow: hidden; /*(3)넘치는 자식 보이지않게 -> 슬라이드가 보여지는 영역*/
+	width: 100vw;
 	height: 100vh;
 	margin: auto;
 }
-
 .slide ul {
 	position: absolute;
-	width: 5760px; /*슬라이드가 가로방향일때만->이미지의 총가로길이(1920*3)*/
+	width: 300vw; /*(2)슬라이드가 가로방향일때만->이미지의 총가로길이(100vw*3)*/
 }
-
 .slide ul li {
-	float: left; /*슬라이드가 가로방향일때만->가로배열*/
-  width: 1920px;
-  height: 1050px;
+	float: left; /*(1)슬라이드가 가로방향일때만->가로배열*/
+  width: 100vw;
+	height: 100vh;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 .slide ul li:nth-child(1){background-image:url(../image/slide-1.png);}
 .slide ul li:nth-child(2){background-image:url(../image/slide-2.png);}
@@ -41,7 +37,6 @@ body {background: #ffc900;}
   height: 65px;
 }
 .slide_side_btn .lbtn:hover{opacity: 0.5;}
-
 .slide_side_btn .rbtn{
   position: absolute;
   top: 50%;
@@ -49,12 +44,8 @@ body {background: #ffc900;}
   right: 30px;
   width: 65px;
   height: 65px;
-
 }
 .slide_side_btn .rbtn:hover{opacity: 0.5;}
-
-
-
 
 /*슬라이드 텍스트 공통*/
 .slide_text{
@@ -77,11 +68,8 @@ body {background: #ffc900;}
   color: #333;
   font-size: 50px;
   font-weight: 500;
-
 }
-.slide_text p{
-  color: #444;
-}
+.slide_text p{color: #444;}
 .slide_text button{
   width: 130px;
   height: 45px;

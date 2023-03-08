@@ -26,13 +26,10 @@
   transform:scale(1);
 }
 
-/*(2)첫번째 이미지만 보임 */ 
-/* .changeimg ul li:nth-child(1){display:block;}  */
 .changeimg ul li:nth-child(1){background-image:url(../image/mvisual-1.jpg);}
 .changeimg ul li:nth-child(2){background-image:url(../image/mvisual-2.jpg);}
 .changeimg ul li:nth-child(3){background-image:url(../image/mvisual-3.jpg);}
 .changeimg ul li:nth-child(4){background-image:url(../image/mvisual-4.jpg);}
-
 
 /*좌우버튼*/
 .icon{
@@ -61,9 +58,7 @@
 }
 .side_btn .rbtn:hover{opacity: 0.5;}
 
-
 /*비주얼 텍스트 공통*/
-
 .des{  /*시작위치의 텍스트->Y축으로 20% 지점*/
   position:absolute;
   top:50%;
@@ -78,6 +73,7 @@
   opacity: 1;
   transform: translate(-50%,-50%);
 }
+
 .des h3{
   font-size: 52px;
   text-shadow:0 0 10px #000;

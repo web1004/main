@@ -4,43 +4,34 @@ body {background: #979797;}
 
 #slideShowUp {
 	position: relative; /*부모기준설정*/
-	overflow: hidden; /*넘치는 자식 보이지않게*/
+	overflow: hidden; /*(3)넘치는 자식 보이지않게 -> 슬라이드가 보여지는 영역*/
 	width: 940px;
 	height: 430px;
 	margin: auto;
 }
-
-.slideUp ul {
-	position: absolute;
-}
+.slideUp ul {position: absolute;}
 
 
-
-/*하단버튼*/
-
+/*우측버튼*/
 .slideUp_btn {
 	position: absolute;
 	bottom: 40px;
 	right: 20px;
 }
-
 .slideUp_btn ul li {
 	background: #000;
 	width: 10px;
 	height: 10px;
 	border-radius: 50%;
-	margin:7px 0;
+	margin: 7px 0;
 	cursor: pointer;
 }
-
 .slideUp_btn ul li.activeup {
 	background: #ff6600;
 	width: 10px;
 	height: 10px;
 	border-radius: 50%;
 }
-
-
 
 /*Play,Stop 버튼*/
 .playstopUp .stopup {
@@ -51,7 +42,6 @@ body {background: #979797;}
 	height: 11px;
 	background: url(../image/btn_pause.png) no-repeat;
 }
-
 .playstopUp .playup {
 	position: absolute;
 	bottom: 20px;
