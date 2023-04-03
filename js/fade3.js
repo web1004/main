@@ -8,8 +8,8 @@ $(document).ready(function () {
   let newImg=0; 
   let oldText=0;  
   let newText=0;
-  let imgCount=$img.length;
-  let textCount=$img.length;
+  let count=$img.length;
+
 
   //이미지&텍스트 전환효과 함수
   function changeImg(newImg){ 
@@ -17,7 +17,7 @@ $(document).ready(function () {
     if(oldImg != newImg){
       $img.eq(oldImg).removeClass("imgVisible");
 			$img.eq(newImg).addClass("imgVisible"); 
-    }
+    };
     oldImg = newImg;
 
   };
@@ -30,23 +30,24 @@ $(document).ready(function () {
     }
     oldText = newText;
 
-  }
+  };
 
 
   //자동함수 생성
   function autoImg(){
 
     newImg++;
-    if(newImg>imgCount-1){ 
+    if(newImg>count-1){ 
       newImg=0;
 		}
 		changeImg(newImg);
 
-  }
+  };
+
   function autoText(){
 
     newText++;
-    if(newText>textCount-1){ 
+    if(newText>count-1){ 
       newText=0;
 		}
 		changeText(newText)
@@ -64,13 +65,13 @@ $(document).ready(function () {
     clearInterval(timer2);
 
     newImg++;
-		if(newImg>imgCount-1){ 
+		if(newImg>count-1){ 
       newImg=0;
 		}
 		changeImg(newImg);
 
     newText++;
-		if(newText>textCount-1){ 
+		if(newText>count-1){ 
       newText=0;
 		}
 		changeText(newText);
@@ -87,13 +88,13 @@ $(document).ready(function () {
 
     newImg--;
 		if(newImg<0){ 
-      newImg=imgCount-1;
+      newImg=count-1;
 		}
 		changeImg(newImg);
 
     newText--;
-		if(newText>textCount-1){ 
-      newText=textCount-1;
+		if(newText<0){ 
+      newText=count-1;
 		}
 		changeText(newText);
 

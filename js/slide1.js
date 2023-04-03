@@ -10,6 +10,7 @@ $(document).ready(function () {
   let soldidx=0; //기존이미지
   let sindex=0; //선택된 새이미지
 
+
   //index번째 비주얼이미지 이동하는 함수생성
   function slideImg(sindex){
 
@@ -21,6 +22,7 @@ $(document).ready(function () {
     soldidx=sindex;
 
   };
+
 
   //슬라이드 자동함수 생성
   function slideAuto(){
@@ -71,7 +73,7 @@ $(document).ready(function () {
     $(".stop").show();
     sindex--;
     if(sindex<0){ //첫번재 이미지까지 오면 다시 맨 마지막 이미지부터 다시...
-      sindex=simg_n-1; //총개수 4(이미지 4컷)에서 1을 뺀 3 -> index=3(0,1,2,3)
+      sindex=simg_n-1; //총개수 5(이미지 5컷)에서 1을 뺀 4 -> index=4(0,1,2,3,4)
     }
     slideImg(sindex);
     auto=setInterval(slideAuto,4000);
@@ -93,5 +95,5 @@ $(document).ready(function () {
     $(".play").hide();
     $(".stop").show();
   });
-  
+
 });

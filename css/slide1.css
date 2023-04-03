@@ -3,18 +3,16 @@
 body {background: #979797;}
 
 #slideShow {
-	position: relative; /*부모기준설정*/
-	overflow: hidden; /*(3)넘치는 자식 보이지않게 -> 슬라이드가 보여지는 영역*/
-	width: 940px;
+  position: relative;
+  width: 940px;
 	height: 430px;
 	margin: auto;
+  overflow: hidden; /*(3)넘치는 자식 보이지않게 -> 슬라이드가 보여지는 영역*/
 }
-.slide ul {
-	position: absolute;
-	width: 4700px; /*(2)슬라이드가 가로방향일때만->이미지의 총가로길이(940*4)*/
-}
-.slide ul li {
-	float: left; /*(1)슬라이드가 가로방향일때만->가로배열*/
+.slide ul{
+  position: absolute;
+  width: 4700px; /*(2)슬라이드가 가로방향일때만->이미지의 총가로길이(940*5)*/
+	display: flex;  /*(1)슬라이드가 가로방향일때만->가로배열*/
 }
 
 
@@ -25,8 +23,8 @@ body {background: #979797;}
 	left: 50%;
   transform: translateX(-50%);
 }
+.slide_btn ul{display: flex;}
 .slide_btn ul li {
-	float: left;
 	background: #000;
 	width: 10px;
 	height: 10px;

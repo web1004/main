@@ -1,29 +1,29 @@
 @import url(common.css);
 
 .fadeShow{
-  position:fixed;  
-	width:100%;
-	height:100vh;
-	margin:auto;
+  position:fixed;
+  width: 100%;
+  height: 100vh;
+  margin:auto;
 }
 
-/*(1)이미지 모두 동일한 위치,안보이게 함*/ 
-.changeimg ul li{ 
-	opacity:0;  
-	position:absolute;
-	top:0;
-	left:0;
+/* (1)이미지 모두 동일한 위치, 안보이게 함 */
+.changeimg ul li{
+  opacity: 0;
+  position:absolute;
+  top:0;
+  left:0;
   width: 100%;
-  height:100vh;
-  background-repeat: no-repeat;
+  height: 100vh;
+  background-repeat:no-repeat;
   background-size: cover;
-  transform:scale(1.2);
-  transition:all 1.5s;
+  transform: scale(1.2);
+  transition: 1.5s;
 }
 .changeimg ul li.imgVisible{   /*->jQuery 에서 불러냄*/
   opacity:1;
-  z-index:1000; 
   transform:scale(1);
+  z-index: 1000;
 }
 
 .changeimg ul li:nth-child(1){background-image:url(../image/mvisual-1.jpg);}
@@ -31,35 +31,36 @@
 .changeimg ul li:nth-child(3){background-image:url(../image/mvisual-3.jpg);}
 .changeimg ul li:nth-child(4){background-image:url(../image/mvisual-4.jpg);}
 
-/*좌우버튼*/
+
+/* 좌우버튼 */
 .icon{
   font-size: 80px;
   color: #fff;
 }
 .side_btn .lbtn{
   position: absolute;
-  top: 50%;
-  z-index: 2000;
+  top:50%;
   transform: translateY(-50%);
-  left: 30px;
-  width: 65px;
+  z-index: 2000;
+  left:30px;
+  width:65px;
   height: 65px;
 }
 .side_btn .lbtn:hover{opacity: 0.5;}
 
 .side_btn .rbtn{
   position: absolute;
-  top: 50%;
+  top:50%;
   transform: translateY(-50%);
-  right: 30px;
-  width: 65px;
-  height: 65px;
   z-index: 2000;
+  right:30px;
+  width:65px;
 }
 .side_btn .rbtn:hover{opacity: 0.5;}
 
+
 /*비주얼 텍스트 공통*/
-.des{  /*시작위치의 텍스트->Y축으로 20% 지점*/
+.des{ 
   position:absolute;
   top:50%;
   left:50%;

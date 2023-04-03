@@ -18,14 +18,15 @@ $(document).ready(function () {
 
   };
 
+
   //다음보기.....
   $(".sidep_btn .nexp").click(function(){
 
     sindexp++;
-    if(sindexp>=simgp_n-1){ //마지막 이미지까지 가면 마지막 이미지에서 멈춤
-      sindexp=4; //0,1,2,3,4 로 마지막이미지          
-    };
-		slidepImg(sindexp);
+    if(sindexp>=simgp_n-1){ 
+      sindexp=4;
+    }
+    slidepImg(sindexp);
 
     if(g_pop<4){
 			g_pop++;
@@ -38,14 +39,14 @@ $(document).ready(function () {
   $(".sidep_btn .prep").click(function(){
 
     sindexp--;	
-		if(sindexp<0){ //첫번째 이미지까지 가면 첫번째 이미지에서 멈춤
-      sindexp=0; //4,3,2,1,0 으로 첫번째이미지          
+		if(sindexp<0){ 
+      sindexp=0;       
     }
 		slidepImg(sindexp);
 
     if(g_pop>0){
 			g_pop--;
-			$(".page span:nth-child(1)").text(g_pop+1); //바뀌는 페이지 표시
+			$(".page span:nth-child(1)").text(g_pop+1); 
 		}
 
   });
