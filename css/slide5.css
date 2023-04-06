@@ -3,7 +3,7 @@
 body {background: #979797;}
 
 #slideShowon {
-	position: relative; /*부모기준설정*/
+	position: relative; 
 	overflow:hidden; 
 	width: 1000px;
 	height: 500px;
@@ -12,7 +12,6 @@ body {background: #979797;}
 #slideShowon .slideon ul {
   display: flex;
 	position: absolute;
-	width: 6000px;  /*슬라이드가 가로방향일때만->이미지의 총가로길이(940*5)*/
 }
 #slideShowon .slideon ul li{ 
 	width: 1000px;
