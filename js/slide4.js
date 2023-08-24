@@ -1,23 +1,21 @@
 $(document).ready(function () {
 
-  let imgp_w=$(".slidep ul li").width(); //이미지의 가로너비
-  let simgp_n= $(".slidep ul li").length;  //이미지의 총개수  
-  let soldidxp=0; //기존이미지
-  let sindexp=0; //선택된 새이미지
+  let imgp_w=$(".slidep ul li").width(); 
+  let simgp_n= $(".slidep ul li").length; 
+  let soldidxp=0; 
+  let sindexp=0; 
 
   let g_pop=$(".slidep ul li").index();
   $(".page span:nth-child(1)").text(g_pop+1); //index는 0부터 시작하므로 페이지를 표시하기 위해 1을 더함
-
 
   //index번째 비주얼이미지 이동하는 함수생성
   function slidepImg(sindexp){
 
     targetpX=-(sindexp*imgp_w); //움직이는 거리(너비)
-    $(".slidep ul").stop(true,true).animate({left:targetpX},600);
+    $(".slidep ul").stop().animate({left:targetpX},600);
     soldidxp=sindexp;
 
   };
-
 
   //다음보기.....
   $(".sidep_btn .nexp").click(function(){
@@ -38,16 +36,16 @@ $(document).ready(function () {
   //이전보기.....
   $(".sidep_btn .prep").click(function(){
 
-    sindexp--;	
-		if(sindexp<0){ 
-      sindexp=0;       
+    sindexp--;
+    if(sindexp<0){ 
+      sindexp=0;
     }
-		slidepImg(sindexp);
+    slidepImg(sindexp);
 
     if(g_pop>0){
 			g_pop--;
-			$(".page span:nth-child(1)").text(g_pop+1); 
-		}
+			$(".page span:nth-child(1)").text(g_pop+1); //바뀌는 페이지 표시
+		};
 
   });
 
