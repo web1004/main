@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<title>slide3-슬라이드-페이지번호</title>
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+	<link rel="stylesheet" href="css/slide3.css">
+</head>
+
+<body>
+
+	<div id="slider">
+		<!-- Slider Content -->
+		<ul class="slide-items">
+			<li class="slide-item dodgerblue">Slide 1</li>
+			<li class="slide-item yellowgreen">Slide 2</li>
+			<li class="slide-item crimson">Slide 3</li>
+			<li class="slide-item gold">Slide 4</li>
+		</ul>
+
+		<!-- Sleder Control -->
+    <div class="control">        
+      <div class="prev">
+        <span class="icon xi-angle-left-thin"></span>
+      </div>
+      <div class="page">
+        <span>1</span> / <span>4</span>
+      </div>
+      <div class="next">
+        <span class="icon xi-angle-right-thin"></span>
+      </div>
+      <label for="toggle">
+        <input type="checkbox" id="toggle"><em></em>
+      </label>
+    </div>
+	</div>
+
+
+	<!-- Script Source -->
+	<script src="js/jquery-3.7.0.min.js"></script>
+	<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+	<script src="js/slide3.js"></script>
+</body>
+
+</html>

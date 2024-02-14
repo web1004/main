@@ -1,6 +1,6 @@
 @import url(common.css);
 
-.fadeShow{  /* FullScreen */
+.fade{  /* FullScreen */
   position:relative;
   width: 100%; 
   height: 100vh;
@@ -8,7 +8,7 @@
 }
 
 /* (1)이미지 모두 동일한 위치, 안보이게 함 */
-.changeimg ul li{
+.fade-items ul li{
   display: none;
   position:absolute;
   top:0;
@@ -20,19 +20,19 @@
 }
 
 /* (2)li에 배경이미지,첫번째 이미지만 보임 */
-.changeimg ul li:first-child{display: block;}
-.changeimg ul li:nth-child(1){background-image: url(../image/fade-1.jpg);}
-.changeimg ul li:nth-child(2){background-image: url(../image/fade-2.jpg);}
-.changeimg ul li:nth-child(3){background-image: url(../image/fade-3.jpg);}
-.changeimg ul li:nth-child(4){background-image: url(../image/fade-4.jpg);}
+.fade-items ul li:first-child{display: block;}
+.fade-items ul li:nth-child(1){background-image: url(../image/fade-1.jpg);}
+.fade-items ul li:nth-child(2){background-image: url(../image/fade-2.jpg);}
+.fade-items ul li:nth-child(3){background-image: url(../image/fade-3.jpg);}
+.fade-items ul li:nth-child(4){background-image: url(../image/fade-4.jpg);}
 
 
-/* 좌우버튼 */
-.icon{
+/* Next Prev Button */
+.side-btn .icon{
   font-size: 80px;
   color: #fff;
 }
-.side_btn .lbtn{
+.side-btn .prev{
   position: absolute;
   top:50%;
   transform: translateY(-50%);
@@ -40,35 +40,35 @@
   width:65px;
   height: 65px;
 }
-.side_btn .lbtn:hover{opacity: 0.5;}
+.side-btn .prev:hover{opacity: 0.5;}
 
-.side_btn .rbtn{
+.side-btn .next{
   position: absolute;
   top:50%;
   transform: translateY(-50%);
   right:30px;
   width:65px;
 }
-.side_btn .rbtn:hover{opacity: 0.5;}
+.side-btn .next:hover{opacity: 0.5;}
 
 
 /* 비주얼 텍스트 공통 */
-.changeimg ul li dl{
+.fade-items ul li dl{
   position: absolute;
   top:160px;
   left:100px;
   color:#fff;
 }
-.changeimg ul li dl dt{font-size: 40px;}
-.changeimg ul li dl dt span{
+.fade-items ul li dl dt{font-size: 40px;}
+.fade-items ul li dl dt span{
   font-size: 30px;
   letter-spacing: -1px;
 }
-.changeimg ul li dl dd:nth-of-type(1){
+.fade-items ul li dl dd:nth-of-type(1){
   font-size: 14px;
   color:#ddd;
 }
-.changeimg ul li dl dd:nth-of-type(2){
+.fade-items ul li dl dd:nth-of-type(2){
   width: 150px;
   height: 42px;
   background: rgba(0,0,0,0.3);

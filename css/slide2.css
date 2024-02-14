@@ -1,82 +1,102 @@
 @import url(common.css);
 
-#slideShow {
-  position: relative;
-  width: 100vw;
-	height: 100vh;
-	margin: auto;
-  overflow: hidden; /*(2)넘치는 자식 보이지않게 -> 슬라이드가 보여지는 영역*/
+* {
+  box-sizing: border-box; 
+  font-family: 'Montserrat', sans-serif;
 }
-.slide ul{
-  position: absolute;
-  display: flex;  /*(1)슬라이드가 가로방향일때만->가로배열*/
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.slide ul li{
-  width: 100vw;
-	height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.slide ul li:nth-child(1){background-image:url(../image/slide-1.png);}
-.slide ul li:nth-child(2){background-image:url(../image/slide-2.png);}
-.slide ul li:nth-child(3){background-image:url(../image/slide-3.png);}
 
 
-/*좌우버튼*/
-.icon{
-  font-size: 80px;
-  color: #333;
+/* Slider Layout */
+#slider {
+	position: relative; 
+  width: 1000px;
+	height: 400px;
+	overflow:hidden; 
 }
-.slide_side_btn .lbtn{
+#slider .slide-items {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 30px;
-  width: 65px;
-  height: 65px;
+  top: 0;
+  left: 0;
+  display: flex;
 }
-.slide_side_btn .lbtn:hover{opacity: 0.5;}
-.slide_side_btn .rbtn{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 30px;
-  width: 65px;
-  height: 65px;
-}
-.slide_side_btn .rbtn:hover{opacity: 0.5;}
-
-/*슬라이드 텍스트 공통*/
-.slide_text{
-  margin-top: 270px;
-  margin-left: 350px;
-}
-.slide_text h2{
-  font-family: 'Poppins', sans-serif;
-  font-size: 36px;
-  color: #333;
-}
-.slide_text h2 strong{
-  font-family: 'Nanum Gothic', sans-serif;
-  font-weight: 800;
-  display: block;
-  color: #d90000;
-  font-size: 50px;
-}
-.slide_text h3{
-  color: #333;
-  font-size: 50px;
-  font-weight: 500;
-}
-.slide_text p{color: #444;}
-.slide_text button{
-  width: 130px;
-  height: 45px;
-  border: none;
-  border-radius: 30px;
-  background: #d90000;
-  font-size: 15px;
-  cursor: pointer;
-  margin-top: 20px;
+#slider .slide-items li{ 
+	width: 1000px;
+	height: 400px;
   color: #fff;
+  font-size: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}  
+#slider .slide-items li.dodgerblue{background-color: dodgerblue;}
+#slider .slide-items li.crimson{background-color: crimson;}
+#slider .slide-items li.yellowgreen{background-color: yellowgreen;}
+#slider .slide-items li.gold{background-color: gold;}
+
+
+/* Next Prev Button */
+.control {
+  position: absolute;
+  color: #fff;
+  padding: 0 20px; 
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  cursor: pointer; 
+}
+.prev {left: 0;}
+.next {right: 0;}
+
+/* Indicator Button */
+.indicatior-button{
+	position: absolute;
+	bottom: 20px;
+	left: 420px;
+  display: flex;
+}
+.indicatior-button li {
+	background: #000;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	margin: 0 7px;
+	cursor: pointer;
+}
+.indicatior-button ul li.active {
+	background: #ff6600;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+}
+
+
+/* Autoplay Control */
+label[for=toggle] {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  cursor: pointer;
+  color: #fff;
+}
+input[id=toggle] { display: none; }
+input[id=toggle] + em {
+  display: inline-block; 
+  font-size: 20px;
+  margin-right: 5px; 
+  vertical-align: middle;
+}
+input[id=toggle] + em:before {
+  content: '\ef71';
+  font-family: 'Material Symbols Outlined';
+  font-style: normal;
+}
+input[id=toggle]:checked + em:before {
+  content: '\e1c4';
 }

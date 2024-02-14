@@ -1,6 +1,6 @@
 @import url(common.css);
 
-.fadeShow{
+.fade{
   position:relative;
   width: 1000px;
   height: 350px;
@@ -8,7 +8,7 @@
 }
 
 /* (1)이미지 모두 동일한 위치, 안보이게 함 */
-.changeimg ul li{
+.fade-items ul li{
   display: none;
   position:absolute;
   top:0;
@@ -16,17 +16,17 @@
 }
 
 /* (2)첫번째 이미지만 보임 */
-.changeimg ul li:first-child{display: block;}
+.fade-items ul li:first-child{display: block;}
 
-/* 하단버튼 */
-.fadeShow .btn{
+/* Bottom Button */
+.bottom-btn{
   position: absolute;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
 }
-.btn ul{display: flex;}
-.btn ul li{
+.bottom-btn ul{display: flex;}
+.bottom-btn ul li{
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -34,27 +34,28 @@
   margin: 0 5px;
   cursor: pointer;
 }
-.btn ul li.active{background: #ff6600;}
+.bottom-btn ul li.active{background: #ff6600;}
 
-/* 좌우버튼 */
-.side_btn .lbtn{
+/* Next Prev Button */
+.side-btn .icon{
+  font-size: 60px;
+  color: #333;
+}
+.side-btn .prev{
   position: absolute;
   top:50%;
   transform: translateY(-50%);
   left:30px;
   width:65px;
   height: 65px;
-  background: url(../image/left-off.png) no-repeat;
 }
-.side_btn .lbtn:hover{background: url(../image/left-on.png) no-repeat;}
+.side-btn .prev:hover{opacity: 0.5;}
 
-.side_btn .rbtn{
+.side-btn .next{
   position: absolute;
   top:50%;
   transform: translateY(-50%);
   right:30px;
   width:65px;
-  height: 65px;
-  background: url(../image/right-off.png) no-repeat;
 }
-.side_btn .rbtn:hover{background: url(../image/right-on.png) no-repeat;}
+.side-btn .next:hover{opacity: 0.5;}

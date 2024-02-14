@@ -1,75 +1,31 @@
 @import url(common.css);
 
-body {background: #979797;}
-
-
-#slideShow{
-  position:relative;
+/* Slide horizontal Animation */
+.slide-horizontal {
   width: 940px;
   height: 430px;
-  margin:auto;
-  overflow: hidden; /*(2)넘치는 자식 보이지않게 -> 슬라이드가 보여지는 영역*/
+  position: relative;
+  overflow: hidden; /*넘치는 자식 보이지않게 -> 슬라이드가 보여지는 영역*/
+  margin: auto;
 }
-.slide ul{
+.slide-horizontal-items {
+  width: 4700px; /* 3개의 총가로너비(940*3) */
+  /* font-size: 0; */
   position: absolute;
-	display: flex;  /*(1)슬라이드가 가로방향일때만->가로배열*/
+  top: 0;
+  left: 0;
 }
 
-/* 하단버튼 */
-.slide_btn{
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.slide_btn ul{display: flex;}
-.slide_btn ul li{
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #000;
-  margin: 0 7px;
-  cursor: pointer;
-}
-.slide_btn ul li.active{background: #ff6600;}
 
-/* 좌우버튼 */
-.slide_side_btn .pre{
+/* Slide vertical Animation */
+.slide-vertical {
+  width: 940px;
+  height: 430px;
+  position: relative;
+  overflow: hidden;
+  margin: 100px auto;
+}
+.slide-vertical-items {
   position: absolute;
-  top:50%;
-  transform: translateY(-50%);
-  left:30px;
-  width:65px;
-  height: 65px;
-  background: url(../image/left-off.png) no-repeat;
-}
-.slide_side_btn .pre:hover{background: url(../image/left-on.png) no-repeat;}
-
-.slide_side_btn .nex{
-  position: absolute;
-  top:50%;
-  transform: translateY(-50%);
-  right:30px;
-  width:65px;
-  height: 65px;
-  background: url(../image/right-off.png) no-repeat;
-}
-.slide_side_btn .nex:hover{background: url(../image/right-on.png) no-repeat;}
-
-/*Play,Stop 버튼*/
-.playstop .stop {
-	position: absolute;
-	bottom: 20px;
-	left: 540px;
-	width: 8px;
-	height: 11px;
-	background: url(../image/btn_pause.png) no-repeat;
-}
-.playstop .play {
-	position: absolute;
-	bottom: 20px;
-	left: 540px;
-	width: 8px;
-	height: 11px;
-	background: url(../image/btn_play.png) no-repeat;
+  font-size: 0;
 }

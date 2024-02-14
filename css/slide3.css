@@ -1,52 +1,80 @@
 @import url(common.css);
 
-body {background: #979797;}
-
-#slideShowUp {
-	position: relative; /*부모기준설정*/
-	overflow: hidden; /*(3)넘치는 자식 보이지않게 -> 슬라이드가 보여지는 영역*/
-	width: 940px;
-	height: 430px;
-	margin: auto;
+* {
+  box-sizing: border-box; 
+  font-family: 'Montserrat', sans-serif;
 }
-.slideUp ul {position: absolute;}
-
-
-/*우측버튼*/
-.slideUp_btn {
-	position: absolute;
-	bottom: 40px;
-	right: 20px;
-}
-.slideUp_btn ul li {
-	background: #000;
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
-	margin: 7px 0;
-	cursor: pointer;
-}
-.slideUp_btn ul li.activeup {
-	background: #ff6600;
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/*Play,Stop 버튼*/
-.playstopUp .stopup {
-	position: absolute;
+
+/* Slider Layout */
+#slider {
+	position: relative; 
+  width: 1000px;
+	height: 400px;
+	overflow:hidden; 
+}
+#slider .slide-items {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+}
+#slider .slide-items li{ 
+	width: 1000px;
+	height: 400px;
+  color: #fff;
+  font-size: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}  
+#slider .slide-items li.dodgerblue{background-color: dodgerblue;}
+#slider .slide-items li.crimson{background-color: crimson;}
+#slider .slide-items li.yellowgreen{background-color: yellowgreen;}
+#slider .slide-items li.gold{background-color: gold;}
+
+
+/* Next Prev Button */
+.control {
+  position: absolute;
+  color: #fff;
 	bottom: 20px;
-	right: 20px;
-	width: 8px;
-	height: 11px;
-	background: url(../image/btn_pause.png) no-repeat;
+  right: 10px;
+  transform: translateX(-50%);
+  cursor: pointer;
+	display: flex; 
 }
-.playstopUp .playup {
-	position: absolute;
-	bottom: 20px;
-	right: 20px;
-	width: 8px;
-	height: 11px;
-	background: url(../image/btn_play.png) no-repeat;
+.prev, .next{font-weight: bold;}
+
+.control .page{
+	font-size: 15px;
+	padding: 0 10px;
+}
+
+/* Autoplay Control */
+label[for=toggle] {
+  cursor: pointer;
+  color: #fff;
+}
+input[id=toggle] { display: none; }
+input[id=toggle] + em {
+  display: inline-block; 
+  font-size: 20px;
+  margin-left: 5px; 
+  vertical-align: middle;
+	transform: translateY(-2px);
+}
+input[id=toggle] + em:before {
+  content: '\ef71';
+  font-family: 'Material Symbols Outlined';
+  font-style: normal;
+}
+input[id=toggle]:checked + em:before {
+  content: '\e1c4';
 }

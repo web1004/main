@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<title>slide2-슬라이드-이전다음-Autoplay제어</title>
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+	<link rel="stylesheet" href="css/slide2.css">
+</head>
+
+<body>
+
+	<div id="slider">
+		<!-- Slider Content -->
+		<ul class="slide-items">
+			<li class="slide-item dodgerblue">Slide 1</li>
+			<li class="slide-item yellowgreen">Slide 2</li>
+			<li class="slide-item crimson">Slide 3</li>
+			<li class="slide-item gold">Slide 4</li>
+		</ul>
+
+		<!-- Next Prev Button -->
+    <span class="control prev">
+      <span class="icon xi-angle-left-thin"></span>
+    </span>
+    <span class="control next">
+      <span class="icon xi-angle-right-thin"></span>
+    </span>
+
+    <!-- Autoplay control -->
+    <label for="toggle">
+      <input type="checkbox" id="toggle"><em></em>Autoplay
+    </label>
+	</div>
+
+
+	<!-- Script Source -->
+	<script src="js/jquery-3.7.0.min.js"></script>
+	<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+	<script src="js/slide2.js"></script>
+</body>
+
+</html>
