@@ -1,0 +1,58 @@
+@import url(reset.css);
+@import url(font.css);
+
+/* Slider Layout */
+.slide{
+  position: relative; 
+  width: 1000px;
+	height: 500px;
+  margin: auto;
+  overflow: hidden;
+}
+.slide .slide-items {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  display: flex;
+}
+.slide .slide-items li{ 
+	width: 100%;
+	height: 100%;
+  color: #fff;
+  font-size: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}  
+.slide .slide-items li.dodgerblue{background-color: dodgerblue;}
+.slide .slide-items li.crimson{background-color: crimson;}
+.slide .slide-items li.yellowgreen{background-color: yellowgreen;}
+.slide .slide-items li.gold{background-color: gold;}
+
+/* Control */
+.control {
+  position: absolute;
+  color: #fff;
+	bottom: 20px;
+  right: 10px;
+  transform: translateX(-50%);
+  cursor: pointer;
+	display: flex; 
+}
+.prev, .next{font-weight: bold;}
+.control .page{
+	font-size: 15px;
+	padding: 0 10px;
+}
+
+.play-stop{
+  width: 20px;
+  height: 20px;
+  position: relative;  
+}
+.play, .stop{
+  font-size: 18px;
+  position: absolute;
+  top: 3px;
+  left: 0;
+}

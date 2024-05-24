@@ -1,4 +1,5 @@
-@import url(common.css);
+@import url(reset.css);
+@import url(font.css);
 
 .fade{
   position:relative;
@@ -18,44 +19,38 @@
 /* (2)첫번째 이미지만 보임 */
 .fade-items ul li:first-child{display: block;}
 
-/* Bottom Button */
-.bottom-btn{
+/* Indicator */
+.fade-indicator{
   position: absolute;
   bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
 }
-.bottom-btn ul{display: flex;}
-.bottom-btn ul li{
-  width: 10px;
-  height: 10px;
+.fade-indicator a{
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
   border-radius: 50%;
-  background: #000;
-  margin: 0 5px;
-  cursor: pointer;
+  text-indent: -9999px;
 }
-.bottom-btn ul li.active{background: #ff6600;}
+.fade-indicator a.active{background-color: #000;}
 
-/* Next Prev Button */
-.side-btn .icon{
+/* Prev Next  Button */
+.fade-side .icon{
   font-size: 60px;
   color: #333;
 }
-.side-btn .prev{
+.fade-side .prev,
+.fade-side .next{
   position: absolute;
-  top:50%;
+  top: 50%;
   transform: translateY(-50%);
-  left:30px;
-  width:65px;
-  height: 65px;
 }
-.side-btn .prev:hover{opacity: 0.5;}
-
-.side-btn .next{
-  position: absolute;
-  top:50%;
-  transform: translateY(-50%);
-  right:30px;
-  width:65px;
-}
-.side-btn .next:hover{opacity: 0.5;}
+.fade-side .prev{left: 30px;}
+.fade-side .next{right: 30px;}
+.fade-side .prev:hover,
+.fade-side .next:hover{opacity: 0.5;}

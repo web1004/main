@@ -1,80 +1,49 @@
-@import url(common.css);
-
-* {
-  box-sizing: border-box; 
-  font-family: 'Montserrat', sans-serif;
-}
-body {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
+@import url(reset.css);
+@import url(font.css);
 
 /* Slider Layout */
-#slider {
-	position: relative; 
-  width: 1000px;
-	height: 400px;
-	overflow:hidden; 
+.slider{
+  position: relative; 
+  overflow: hidden;
 }
-#slider .slide-items {
+.slider .slide-list {
+  height: 500px;
+  position: relative;  /* ul를 기준으로 li의 위치설정 */
+}
+.slider .slide-list li{ 
   position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-}
-#slider .slide-items li{ 
-	width: 1000px;
-	height: 400px;
+	width: 100%;
+	height: 100%;
   color: #fff;
   font-size: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
-}  
-#slider .slide-items li.dodgerblue{background-color: dodgerblue;}
-#slider .slide-items li.crimson{background-color: crimson;}
-#slider .slide-items li.yellowgreen{background-color: yellowgreen;}
-#slider .slide-items li.gold{background-color: gold;}
+} 
 
+.slider .slide-list li:nth-child(1){background-color: yellowgreen;}
+.slider .slide-list li:nth-child(2){background-color: gold;}
+.slider .slide-list li:nth-child(3){background-color: royalblue;}
+.slider .slide-list li:nth-child(4){background-color: orchid;}
 
-/* Next Prev Button */
-.control {
+/* Indicator(하단버튼)  */
+.slider .slide-indicator{
   position: absolute;
-  color: #fff;
-	bottom: 20px;
-  right: 10px;
+  left: 50%;
   transform: translateX(-50%);
-  cursor: pointer;
-	display: flex; 
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  z-index: 10;
 }
-.prev, .next{font-weight: bold;}
-
-.control .page{
-	font-size: 15px;
-	padding: 0 10px;
+.slider .slide-indicator a{
+  width: 80px;
+  height: 6px;
+  background-color: #fff;
+  display: flex;
+  text-indent: -9999px;
 }
-
-/* Autoplay Control */
-label[for=toggle] {
-  cursor: pointer;
-  color: #fff;
-}
-input[id=toggle] { display: none; }
-input[id=toggle] + em {
-  display: inline-block; 
-  font-size: 20px;
-  margin-left: 5px; 
-  vertical-align: middle;
-	transform: translateY(-2px);
-}
-input[id=toggle] + em:before {
-  content: '\ef71';
-  font-family: 'Material Symbols Outlined';
-  font-style: normal;
-}
-input[id=toggle]:checked + em:before {
-  content: '\e1c4';
+.slider .slide-indicator a.active{
+  background: #000;
 }

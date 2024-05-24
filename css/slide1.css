@@ -1,31 +1,31 @@
-@import url(common.css);
+@import url(reset.css);
+@import url(font.css);
 
 /* Slide horizontal Animation */
 .slide-horizontal {
   width: 940px;
   height: 430px;
   position: relative;
-  overflow: hidden; /*넘치는 자식 보이지않게 -> 슬라이드가 보여지는 영역*/
   margin: auto;
+  overflow: hidden; 
 }
 .slide-horizontal-items {
   width: 4700px; /* 3개의 총가로너비(940*3) */
-  /* font-size: 0; */
   position: absolute;
   top: 0;
   left: 0;
 }
-
 
 /* Slide vertical Animation */
 .slide-vertical {
   width: 940px;
   height: 430px;
   position: relative;
-  overflow: hidden;
   margin: 100px auto;
+  overflow: hidden; 
 }
 .slide-vertical-items {
   position: absolute;
-  font-size: 0;
+  top: 0;
+  left: 0;
 }
