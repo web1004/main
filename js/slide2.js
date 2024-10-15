@@ -35,7 +35,7 @@ $(document).ready(function(){
 
   // Next Prev Button
   slidePrev.click(function(e){
-    preventDefault();
+    e.preventDefault();
     slideRight(); 
   });
 
