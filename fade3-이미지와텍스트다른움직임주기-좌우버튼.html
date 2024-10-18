@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>fade3-이미지와텍스트다른움직임주기-좌우버튼</title>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+  <link rel="stylesheet" href="css/fade3.css">
+</head>
+<body>
+
+  <div class="fadeShow">
+    <div class="changeimg">
+      <ul>
+        <li class="imgVisible">  <!-- imgVisible 는 첫번째 배경이미지 활성화 -->
+          <div class="des textVisible">  <!-- textVisible 첫번째 텍스트 활성화 -->
+            <h3>경복궁</h3>
+            <p>1395년 창건된 조선의 으뜸 궁궐.</p>
+            <p>북으로 북악산을 기대어 자리 잡은 수도서울의 중심 경복궁,<br>격조 높고 품위 있는 왕실문화의 진수를 경험하세요.</p>
+            <p><a href="http://webd1004.pe.kr" target="_blank">자세히보기</a></p>
+          </div>
+        </li>
+        <li>
+          <div class="des">
+            <h3>광화문</h3>
+            <p>조선 법궁인 경복궁의 정문.</p>
+            <p>다른 궁궐들의 정문과는 달리 높은 석축과 누각으로<br>마치 성곽의 성문과 같은 격식으로 장대하게 지어졌습니다.</p>
+            <p><a href="#none">자세히보기</a></p>
+          </div>
+        </li>
+        <li>
+          <div class="des">
+            <h3>근정전</h3>
+            <p>경복궁의 정전(正殿).</p>
+            <p>궁궐 내 가장 규모가 크고 격식을 갖춘 건물로<br>조회의식, 대례(大禮) 등 중요행사를 치르던 곳입니다.</p>
+            <p><a href="#none">자세히보기</a></p>
+          </div>
+        </li>
+        <li>
+          <div class="des">
+            <h3>경회루</h3>
+            <p>침전영역 서쪽 연못 안에 조성된 누각.</p>
+            <p>임금과 신하, 외국사신등 연회장소로 사용,<br>경복궁 중건당시 나라의 가뭄이 들 때 기우제를 지내던 곳입니다.</p>
+            <p><a href="#none">자세히보기</a></p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 좌우버튼 -->
+    <div class="side_btn">
+      <a class="lbtn" href="#"><span class="icon xi-angle-left-thin"></span></a>
+			<a class="rbtn" href="#"><span class="icon xi-angle-right-thin"></span></a>
+    </div>
+  </div>
+
+  
+  <!-- Script Source -->
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+  <script src="js/fade3.js"></script>  
+</body>
+</html>

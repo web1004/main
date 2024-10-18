@@ -14,27 +14,26 @@ $(document).ready(function(){
     if(oldidx != idx){  //기존의 이미지와 선택된 이미지가 다를때...
       fadeImage.eq(oldidx).stop().fadeOut("300"); //기존 이미지 사라짐
       fadeImage.eq(idx).stop().fadeIn("300"); //새로 바뀌는 이미지 나타남  
-    }
+    };
     oldidx = idx; //새로 바뀐 이미지는 이미지는 다시 기존이미지로 저장되어서 Fade Out...
   };
 
-  //자동페이드 함수
-  //일정시간마다 할일 - setInterval(할일,시간) / clearInterval(변수) 
+  //자동Fade함수
+  //일정시간마다 할일: setInterval(함수명,시간) / clearInterval(변수) 
   function fadeAuto(){
     fadeTimer = setInterval(function(){
-      //현재가 (0+1)%5=1, (1+1)%5=2, (2+1)%5=3, (3+1)%5=4, (4+1)%5=0 
-      idx = (oldidx + 1) % fadeCount;
-      fadeAni(idx);
+    //현재가 (0+1)%5=1,(1+1)%5=2,(2+1)%5=3, (3+1)%5=4, (4+1)%5=0  
+    idx = (oldidx + 1) % fadeCount;
+    fadeAni(idx);  
     },interval);
   };
-
   fadeAuto();
 
   //좌우버튼
   fadePrev.click(function(){
     idx--;
     if(idx < 0){ //선택한 이미지가 4,3,2,1,0 첫번째일때 맨 마지막부터 다시 시작
-      idx=fadeCount-1;  //fadeCount는 length로 센 개수 5에서 1을 빼야 마지막 index 4 가 됨
+      idx=fadeCount-1;  //fadeCount는 length로 센 개수 5에서 1을 빼야 마지막 index 4가 됨
     }
     fadeAni(idx);
   });
@@ -47,7 +46,6 @@ $(document).ready(function(){
   });
 
   //전체영역에 마우스를 올리면 자동함수 멈추고 다시 마우스가 나오면 자동함수 실행
-  //mouseover(마우스가 들어와서 조금만 움직여도 계속 작동함)
   fadeContainer.mouseenter(function(){
     clearInterval(fadeTimer);
   })

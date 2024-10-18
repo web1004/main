@@ -15,7 +15,7 @@ $(document).ready(function(){
     if(oldImg != newImg){
       $img.eq(oldImg).removeClass("imgVisible");
       $img.eq(newImg).addClass("imgVisible");
-    };
+    }
     oldImg = newImg;
   };
 
@@ -44,13 +44,13 @@ $(document).ready(function(){
     changeText(newText);
   };
   timerImg = setInterval(autoImg,4000); 
-  timerText = setInterval(autoText,4000); 
-
+  timerText = setInterval(autoText,4000);
+  
   //좌우버튼
   $lbtn.click(function(){
     newImg--;
-    if(newImg<0){ 
-      newImg=count-1;
+    if(newImg < 0){ 
+      newImg=count-1;  
     }
     changeImg(newImg);
 
@@ -59,9 +59,7 @@ $(document).ready(function(){
       newText=count-1;
     }
     changeText(newText);
-
   });
-
   $rbtn.click(function(){
     newImg++;
     if(newImg>count-1){ 
@@ -74,7 +72,6 @@ $(document).ready(function(){
       newText=0;
     }
     changeText(newText);
-
   });
 
   //마우스오버 멈춤

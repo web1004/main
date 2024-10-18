@@ -14,26 +14,25 @@ $(document).ready(function(){
   function fadeAni(idx){  //매개변수가 있는 함수 ->idx는 선택되는 이미지
     if(oldidx != idx){  //기존의 이미지와 선택된 이미지가 다를때...
       fadeIndicator.eq(oldidx).removeClass("active"); //기존 하단버튼 비활성화 ->active 클래스를 삭제
-      fadeIndicator.eq(idx).addClass("active"); //선택된 하단버튼 활성화- >active 클래스를 추가
+      fadeIndicator.eq(idx).addClass("active"); //선택된 하단버튼 활성화 ->active 클래스를 추가
       fadeImage.eq(oldidx).stop().fadeOut("300"); //기존 이미지 사라짐
       fadeImage.eq(idx).stop().fadeIn("300"); //새로 바뀌는 이미지 나타남  
-    }
+    };
     oldidx = idx; //새로 바뀐 이미지는 이미지는 다시 기존이미지로 저장되어서 Fade Out...
   };
 
-  //자동페이드 함수
-  //일정시간마다 할일 - setInterval(할일,시간) / clearInterval(변수) 
+  //자동Fade함수
+  //일정시간마다 할일: setInterval(함수명,시간) / clearInterval(변수) 
   function fadeAuto(){
     fadeTimer = setInterval(function(){
-      //현재가 (0+1)%5=1, (1+1)%5=2, (2+1)%5=3, (3+1)%5=4, (4+1)%5=0 
-      idx = (oldidx + 1) % fadeCount;
-      fadeAni(idx);
+    //현재가 (0+1)%5=1,(1+1)%5=2,(2+1)%5=3, (3+1)%5=4, (4+1)%5=0  
+    idx = (oldidx + 1) % fadeCount;
+    fadeAni(idx);  
     },interval);
   };
-
   fadeAuto();
 
-  //indicator(하단버튼)
+  //Indicator(하단버튼)
   fadeIndicator.click(function(){
     idx = $(this).index();
     fadeAni(idx);
@@ -43,7 +42,7 @@ $(document).ready(function(){
   fadePrev.click(function(){
     idx--;
     if(idx < 0){ //선택한 이미지가 4,3,2,1,0 첫번째일때 맨 마지막부터 다시 시작
-      idx=fadeCount-1;  //fadeCount는 length로 센 개수 5에서 1을 빼야 마지막 index 4 가 됨
+      idx=fadeCount-1;  //fadeCount는 length로 센 개수 5에서 1을 빼야 마지막 index 4가 됨
     }
     fadeAni(idx);
   });
